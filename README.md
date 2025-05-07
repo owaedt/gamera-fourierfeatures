@@ -13,9 +13,10 @@ Purpose
 This toolkits provides an implementation of all Fourier descriptors
 that were discussed and evaluated in the following paper:
 
-   Dalitz, C., Brandt, C., Goebbels, S., Kolanus, D.:
-   "Fourier Descriptors for Broken Shapes." EURASIP Journal on
-   Advances in Signal Processing 2013:161, 2013
+> Dalitz, C., Brandt, C., Goebbels, S., Kolanus, D.:
+> "Fourier Descriptors for Broken Shapes." EURASIP Journal on
+> Advances in Signal Processing 2013:161, 2013
+> https://doi.org/10.1186/1687-6180-2013-161
 
 In this study, the best performing Fourier descriptors were
 fdsingle_complex_position for unbroken (connected) shapes, and
