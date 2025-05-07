@@ -50,7 +50,7 @@ See the section "Installation" in 'doc/html/index.html' or
 Authors
 -------
 
-Christoph Dalitz, <christoph dot dalitz at hsnr dot de>, 2013
+Christoph Dalitz, 2013, https://lionel.kr.hsnr.de/~dalitz/
 Christian Brandt, 2013
 
 Please contact Christoph Dalitz for questions about this toolkit.
