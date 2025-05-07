@@ -1,0 +1,66 @@
+=======
+Plugins
+=======
+
+By categories
+-------------
+
+- Features_
+
+  - fdbroken_a_
+
+  - fdbroken_a_phase_
+
+  - fdbroken_a_phase_s1_
+
+  - fdbroken_b_
+
+  - fdbroken_c_
+
+  - fdbroken_c_phase_
+
+  - fdbroken_c_phase_s1_
+
+  - fdsingle_centroid_distance_
+
+  - fdsingle_centroid_distance_phase_
+
+  - fdsingle_complex_position_
+
+  - fdsingle_complex_position_phase_
+
+  - fdsingle_complex_position_phase_r1_
+
+  - fdsingle_complex_position_r1_
+
+  - fdsingle_elliptic_
+
+  - fdsingle_granlund_
+
+  - fdsingle_real_position_
+
+Alphabetical
+-------------
+
+
+**F**
+
+fdbroken_a_, fdbroken_a_phase_, fdbroken_a_phase_s1_, fdbroken_b_, fdbroken_c_, fdbroken_c_phase_, fdbroken_c_phase_s1_, fdsingle_centroid_distance_, fdsingle_centroid_distance_phase_, fdsingle_complex_position_, fdsingle_complex_position_phase_, fdsingle_complex_position_phase_r1_, fdsingle_complex_position_r1_, fdsingle_elliptic_, fdsingle_granlund_, fdsingle_real_position_
+
+.. _Features: features.html#features
+.. _fdbroken_a: features.html#fdbroken-a
+.. _fdbroken_a_phase: features.html#fdbroken-a-phase
+.. _fdbroken_a_phase_s1: features.html#fdbroken-a-phase-s1
+.. _fdbroken_b: features.html#fdbroken-b
+.. _fdbroken_c: features.html#fdbroken-c
+.. _fdbroken_c_phase: features.html#fdbroken-c-phase
+.. _fdbroken_c_phase_s1: features.html#fdbroken-c-phase-s1
+.. _fdsingle_centroid_distance: features.html#fdsingle-centroid-distance
+.. _fdsingle_centroid_distance_phase: features.html#fdsingle-centroid-distance-phase
+.. _fdsingle_complex_position: features.html#fdsingle-complex-position
+.. _fdsingle_complex_position_phase: features.html#fdsingle-complex-position-phase
+.. _fdsingle_complex_position_phase_r1: features.html#fdsingle-complex-position-phase-r1
+.. _fdsingle_complex_position_r1: features.html#fdsingle-complex-position-r1
+.. _fdsingle_elliptic: features.html#fdsingle-elliptic
+.. _fdsingle_granlund: features.html#fdsingle-granlund
+.. _fdsingle_real_position: features.html#fdsingle-real-position

@@ -1,0 +1,126 @@
+==========================
+Overview of the FD-toolkit
+==========================
+
+:Editor: Christian Brandt, Christoph Dalitz and Oskar Waedt
+
+:Version: 2.0.0
+
+Overview
+''''''''
+
+This toolkit implements the Fourier descriptors described in [Dalitz2013]_.
+The number of coefficients (= feature dimension) used is controlled
+by the variable ``FDLENGTH`` in ``gamera/toolkits/plugins/single.py`` and
+``gamera/toolkits/plugins/broken.py``, which is evaluated at the compile
+time of the toolkit. It defaults to 60. When changing it, make sure to
+choose a multiple of 12.
+
+
+All Fourier descriptors are provided as Gamera plugins in the category
+"Features", so that they are immediately available after loading the
+toolkit in Gamera. The features are distributed over two files: 
+``single.py`` provides descriptors that only work on unbroken shapes,
+and ``broken.py`` provides descriptors that work on broken shapes, too.
+
+Documentation
+'''''''''''''
+
+For a detailed documentation of the availabe plugins
+and how they relate to the equations in [Dalitz2013]_, see the Plugins_
+documentation.
+
+The best performing features in [Dalitz2013]_ were fdbroken_a_ for shapes
+combined from an arbitrary number of parts and fdsingle_complex_position_
+for connected shapes consisting of only a single part.
+
+.. _Plugins: features.html
+
+.. _fdbroken_a: features.html#fdbroken-a
+
+.. _fdsingle_complex_position: features.html#fdsingle-complex-position
+
+Installation
+''''''''''''
+
+This toolkit has only been tested on Linux and MacOS X.
+The following installation instructions should work for any Unix like
+operating system (MacOS X, Linux, Solaris, FreeBSD, ...) 
+
+Prerequisites
+-------------
+
+First you will need a working installation of Gamera 4.x. See the 
+`Gamera website <https://gamera.informatik.hsnr.de/>`__ and the `GitHub repository <https://github.com/hsnr-gamera>` for details. It is strongly recommended that you use
+a recent version and install Gamera inside a virtual environment (venv).
+
+If you want to generate the documentation, you will need the additional
+third-party Python libraries docutils_ and pygments_ for handling
+reStructuredText documents.
+
+.. _docutils: https://docutils.sourceforge.io/
+.. _pygments: http://pygments.org/
+
+.. note:: It is generally not necessary to generate the documentation 
+   because it is included in file releases of the toolkit.
+
+
+Building and Installing
+-----------------------
+
+To build and install this toolkit on Linux or MacOS X, activate your virtual environment (where Gamera is installed), go to the base
+directory of the toolkit distribution and run ::
+	
+	# 1) activate the virtual environment
+	source path/to/venv/bin/activate
+   	# 2) compile
+	python3 setup.py build bdist_wheel
+	# 3) install
+	pip3 install dist/gamera_ocr-*.whl
+	
+No root privileges are required. All components are installed locally inside the virtual environment.
+
+If you want to use your virtual environment with Gamera globally, you can add its bin directory to your shell’s PATH variable:
+
+echo 'export PATH="$HOME/venv/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+
+To regenerate the documentation, go to the ``doc`` directory and run the
+``gendoc.py`` script. The output will be placed in the ``doc/html/``
+directory.  The contents of this directory can be placed on a webserver
+for convenient viewing.
+
+.. note:: Before building the documentation you must install the
+   toolkit. Otherwise ``gendoc.py`` will not find the plugin documentation.
+
+Uninstallation
+--------------
+
+On Linux, you can uninstall the fd_toolkit as follows:
+	1)Activate the virtual environment:
+	source venv/bin/activate
+	2)Uninstall the toolkit:
+	pip3 uninstall fd_toolkit
+
+All python library files of this toolkit are installed into the 
+``gamera/toolkits/fd_toolkit`` subdirectory of the Python library folder.
+It is thus sufficient to remove this directory for an uninstallation.
+
+Where the python library folder is depends on your system and python version.
+Here are the folders that you need to remove on MacOS X and Debian Linux
+("2.5" stands for the python version; replace it with your actual version):
+
+  - MacOS X: ``/Library/Python/2.5/gamera/toolkits/fd_toolkit``
+
+  - Debian Linux: ``/usr/lib/python2.5/site-packages/gamera/toolkits/fd_toolkit``
+
+Recommendation: Always install toolkits using pip inside a virtual environment, so you can uninstall them cleanly.
+
+References
+''''''''''
+
+.. [Dalitz2013] Dalitz, C., Brandt, C., Goebbels, S., Kolanus, D.:
+   `"Fourier Descriptors for Broken Shapes."`__ EURASIP Journal on
+   Advances in Signal Processing 2013:161, 2013
+
+.. __: https://doi.org/10.1186/1687-6180-2013-161

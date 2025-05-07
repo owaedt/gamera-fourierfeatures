@@ -1,0 +1,348 @@
+
+Features
+========
+
+``fdbroken_a``
+--------------
+
+``FloatVector`` **fdbroken_a** ()
+
+
+:Operates on: ``Image`` [OneBit]
+:Returns: ``FloatVector``
+:Category: Features
+:Defined in: broken.py
+:Author: Christian Brandt and Christoph Dalitz
+
+
+Fourier descriptor for broken shapes according to Eq.(19) in
+[Dalitz2013]_. The coefficient c_0 is used for scale normalisation.
+
+The absolute values of 
+the coefficients A(0), A(N-1) A(1), A(N-2), ... are returned.
+
+Reference:
+
+  .. [Dalitz2013] Dalitz, C., Brandt, C., Goebbels, S., Kolanus, D.:
+     "Fourier Descriptors for Broken Shapes." EURASIP Journal on
+     Advances in Signal Processing 2013:161, 2013
+
+.. note:: In this study, *fdbroken_a* was the best performing Fourier
+          descriptor on the NEUMES data set of broken shapes.
+
+
+
+``fdbroken_a_phase``
+--------------------
+
+``FloatVector`` **fdbroken_a_phase** ()
+
+
+:Operates on: ``Image`` [OneBit]
+:Returns: ``FloatVector``
+:Category: Features
+:Defined in: broken.py
+:Author: Christian Brandt and Christoph Dalitz
+
+
+Fourier descriptor for broken shapes according to Eq. (19) in
+[Dalitz2013]_. The coefficients c_r and c_s are used for scale and phase
+normalisation. c_r and c_s are the two coefficients with the largest and
+second largest value (r >= 0, 0 < s < N/2).
+
+The complex values of the coefficients A(0), A(N/2-1) A(1), A(N/2-2), ...
+are returned as alternating real and imaginary parts.
+
+
+``fdbroken_a_phase_s1``
+-----------------------
+
+``FloatVector`` **fdbroken_a_phase_s1** ()
+
+
+:Operates on: ``Image`` [OneBit]
+:Returns: ``FloatVector``
+:Category: Features
+:Defined in: broken.py
+:Author: Christian Brandt and Christoph Dalitz
+
+
+Fourier descriptor for broken shapes according to Eq. (19) in
+[Dalitz2013]_. 
+The coefficients c_0 and c_1 are used for scale and phase normalisation. 
+
+The complex values of the coefficients A(0), A(N/2-1) A(1), A(N/2-2), ... 
+are returned as alternating real and imaginary parts.
+
+
+``fdbroken_b``
+--------------
+
+``FloatVector`` **fdbroken_b** ()
+
+
+:Operates on: ``Image`` [OneBit]
+:Returns: ``FloatVector``
+:Category: Features
+:Defined in: broken.py
+:Author: Christian Brandt and Christoph Dalitz
+
+
+Fourier descriptor for broken shapes according to Eq. (20) in
+[Dalitz2013]_.
+
+The values of the coefficients B(1), B(2), ... B(N) are returned.
+
+
+``fdbroken_c``
+--------------
+
+``FloatVector`` **fdbroken_c** ()
+
+
+:Operates on: ``Image`` [OneBit]
+:Returns: ``FloatVector``
+:Category: Features
+:Defined in: broken.py
+:Author: Christian Brandt and Christoph Dalitz
+
+
+Fourier descriptor for broken shapes according to Eq. (22) in
+[Dalitz2013]_. The coefficient c_0 is used for scale normalisation.
+
+The absolute values of the coefficients C(0), ... C(N/2-1) are returned.
+
+
+``fdbroken_c_phase``
+--------------------
+
+``FloatVector`` **fdbroken_c_phase** ()
+
+
+:Operates on: ``Image`` [OneBit]
+:Returns: ``FloatVector``
+:Category: Features
+:Defined in: broken.py
+:Author: Christian Brandt and Christoph Dalitz
+
+
+Fourier descriptor for broken shapes according to Eq. (22) in
+[Dalitz2013]_. The coefficients c_r and c_s are used for scale and phase
+normalisation. c_r and c_s are the two coefficients with the largest and
+second largest absolute value (r >= 0, 0 < s < N/2).
+
+The complex values of the coefficients C(0), 
+... C(N/4-1) are returned as alternating real and imaginary parts.
+
+
+``fdbroken_c_phase_s1``
+-----------------------
+
+``FloatVector`` **fdbroken_c_phase_s1** ()
+
+
+:Operates on: ``Image`` [OneBit]
+:Returns: ``FloatVector``
+:Category: Features
+:Defined in: broken.py
+:Author: Christian Brandt and Christoph Dalitz
+
+
+Fourier descriptor for broken shapes according to Eq. (22) in
+[Dalitz2013]_. The coefficients c_0 = 1/N  sum(r(t)) is used for scale
+normalisation. The coefficient c_1 is used for phase normalization.
+
+The complex values of the coefficients C(0), ... C(N/4-1) are returned as
+alternating real and imaginary parts.
+
+
+``fdsingle_centroid_distance``
+------------------------------
+
+``FloatVector`` **fdsingle_centroid_distance** ()
+
+
+:Operates on: ``Image`` [OneBit]
+:Returns: ``FloatVector``
+:Category: Features
+:Defined in: single.py
+:Author: Christian Brandt and Christoph Dalitz
+
+
+Centroid distance Fourier descriptor for unbroken shapes according
+to Eq. (16) in [Dalitz2013]_. The coefficient c_0 is used for scale
+normalisation.
+
+The absolute values of the coefficients R(1), R(2), ... are returned.
+
+
+``fdsingle_centroid_distance_phase``
+------------------------------------
+
+``FloatVector`` **fdsingle_centroid_distance_phase** ()
+
+
+:Operates on: ``Image`` [OneBit]
+:Returns: ``FloatVector``
+:Category: Features
+:Defined in: single.py
+:Author: Christian Brandt and Christoph Dalitz
+
+
+Centroid distance Fourier descriptor for unbroken shapes according
+to Eq. (16) in [Dalitz2013]_. The coefficients c_0 and c_s are used for scale
+and phase normalisation. c_s is the coefficient with the largest absolute
+value (s >= 1).
+
+The complex values of the coefficients R(1), R(2), ... are returned 
+as alternating real and imaginary parts.
+
+
+``fdsingle_complex_position``
+-----------------------------
+
+``FloatVector`` **fdsingle_complex_position** ()
+
+
+:Operates on: ``Image`` [OneBit]
+:Returns: ``FloatVector``
+:Category: Features
+:Defined in: single.py
+:Author: Christian Brandt and Christoph Dalitz
+
+
+Complex position Fourier descriptor for unbroken shapes according to 
+Eq. (6) in [Dalitz2013]_. The coefficient c_r is used for scale normalisation.
+c_r is the coefficient with the largest absolute value.
+
+The absolute values
+of the coefficients l(1), l(N-1), l(2), l(N-2), ... are returned.
+
+.. note:: In the study [Dalitz2013]_, this was the best performing Fourier
+          descriptor on the MPEG7 data set of connected shapes.
+
+
+
+``fdsingle_complex_position_phase``
+-----------------------------------
+
+``FloatVector`` **fdsingle_complex_position_phase** ()
+
+
+:Operates on: ``Image`` [OneBit]
+:Returns: ``FloatVector``
+:Category: Features
+:Defined in: single.py
+:Author: Christian Brandt and Christoph Dalitz
+
+
+Complex position Fourier descriptor for unbroken shapes according to 
+Eq. (6) in [Dalitz2013]_. The coefficients c_r and c_s are used for scale and
+phase normalisation. c_r and c_s are the two coefficients with the largest and 
+second largest absolute value. (r >= 0, 0 < s < N/2).
+
+The complex values of the coefficients l(1), l(N-1) l(2), l(N-2), ... are
+returned as alternating real and imaginary parts.
+
+
+``fdsingle_complex_position_phase_r1``
+--------------------------------------
+
+``FloatVector`` **fdsingle_complex_position_phase_r1** ()
+
+
+:Operates on: ``Image`` [OneBit]
+:Returns: ``FloatVector``
+:Category: Features
+:Defined in: single.py
+:Author: Christian Brandt and Christoph Dalitz
+
+
+Complex position Fourier descriptor for unbroken shapes according to 
+Eq. (6) in [Dalitz2013]_. The coefficients c_1 and c_r are used for scale and
+phase normalisation. c_r is the coefficient with the largest absolute value.
+
+The complex values of the coefficients l(1), l(N-1) l(2), l(N-2), ... are 
+returned as alternating real and imaginary parts.
+
+
+``fdsingle_complex_position_r1``
+--------------------------------
+
+``FloatVector`` **fdsingle_complex_position_r1** ()
+
+
+:Operates on: ``Image`` [OneBit]
+:Returns: ``FloatVector``
+:Category: Features
+:Defined in: single.py
+:Author: Christian Brandt and Christoph Dalitz
+
+
+Complex position Fourier descriptor for unbroken shapes according to 
+Eq. (6) in [Dalitz2013]_. The coefficient c_1 is used for scale normalisation.
+
+The absolute values of the coefficients l(1), l(N-1), l(2), l(N-2), ... are 
+returned.
+
+
+``fdsingle_elliptic``
+---------------------
+
+``FloatVector`` **fdsingle_elliptic** ()
+
+
+:Operates on: ``Image`` [OneBit]
+:Returns: ``FloatVector``
+:Category: Features
+:Defined in: single.py
+:Author: Christian Brandt and Christoph Dalitz
+
+
+Elliptic Fourier descriptor for unbroken shapes according to Eq. 
+(12) in [Dalitz2013]_. The coefficient I_1 is used for normalisation.
+
+The values of the coefficients I(1), J(1), k1(1), I(2), J(2), K(2), ... are
+returned.
+
+
+``fdsingle_granlund``
+---------------------
+
+``FloatVector`` **fdsingle_granlund** ()
+
+
+:Operates on: ``Image`` [OneBit]
+:Returns: ``FloatVector``
+:Category: Features
+:Defined in: single.py
+:Author: Christian Brandt and Christoph Dalitz
+
+
+Granlund's Fourier descriptor for unbroken shapes according to 
+Eq. (7) in [Dalitz2013]_. The coefficient c_1 is used for normalisation.
+c_r is the coefficient with the largest absolute value.
+
+The complex values of the coefficients d(2), d(3), ... are returned as
+alternating real and imaginary parts.
+
+
+``fdsingle_real_position``
+--------------------------
+
+``FloatVector`` **fdsingle_real_position** ()
+
+
+:Operates on: ``Image`` [OneBit]
+:Returns: ``FloatVector``
+:Category: Features
+:Defined in: single.py
+:Author: Christian Brandt and Christoph Dalitz
+
+
+Real position Fourier descriptor for unbroken shapes according to 
+Eq. (13) in [Dalitz2013]_. The coefficient c_1 is used for normalisation.
+
+The values of the coefficients with indexes starting at 1 are returned.
+
+

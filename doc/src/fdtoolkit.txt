@@ -1,0 +1,19 @@
+
+FdToolkit
+=========
+
+``floatFourierDescriptorLaskov``
+--------------------------------
+
+``FloatVector`` **floatFourierDescriptorLaskov** ([object *points*], int *dftcount* = 24)
+
+
+:Returns: ``FloatVector``
+:Category: FdToolkit
+:Defined in: single.py
+:Author: Christian Brandt
+
+.. warning:: No documentation written.
+
+
+
