@@ -4,14 +4,23 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="Docutils 0.21.2: https://docutils.sourceforge.io/" />
-<title>Overview of the FD-toolkit</title>
+<title>Overview of the Fourier Features</title>
 <link rel="stylesheet" href="default.css" type="text/css" />
 </head>
 <body>
-<div class="document" id="overview-of-the-fd-toolkit">
-<h1 class="title">Overview of the FD-toolkit</h1>
+<div class="document" id="overview-of-the-fourier-features">
+<h1 class="title">Overview of the Fourier Features</h1>
 
-<p><strong>Last modified</strong>: May 01, 2025</p>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">./src/index.txt</tt>, line 1)</p>
+<p>Title overline too short.</p>
+<pre class="literal-block">
+==========================
+Overview of the Fourier Features
+==========================
+</pre>
+</div>
+<p><strong>Last modified</strong>: May 09, 2025</p>
 <div class="contents topic" id="contents">
 <p class="topic-title"><a class="reference internal" href="#top">Contents</a></p>
 <ul class="simple">
@@ -30,7 +39,7 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field"><th class="field-name">Editor:</th><td class="field-body">Christian Brandt, Christoph Dalitz and Oskar Waedt</td>
+<tr class="field"><th class="field-name">Editor:</th><td class="field-body">Christian Brandt, Christoph Dalitz, Oskar Waedt</td>
 </tr>
 <tr class="field"><th class="field-name">Version:</th><td class="field-body">2.0.0</td>
 </tr>
@@ -56,7 +65,7 @@ and <tt class="docutils literal">broken.py</tt> provides descriptors that work o
 and how they relate to the equations in <a class="citation-reference" href="#dalitz2013" id="citation-reference-2">[Dalitz2013]</a>, see the <a class="reference external" href="features.html">Plugins</a>
 documentation.</p>
 <p>The best performing features in <a class="citation-reference" href="#dalitz2013" id="citation-reference-3">[Dalitz2013]</a> were <a class="reference external" href="features.html#fdbroken-a">fdbroken_a</a> for shapes
-combined from an arbitrar number of parts and <a class="reference external" href="features.html#fdsingle-complex-position">fdsingle_complex_position</a>
+combined from an arbitrary number of parts and <a class="reference external" href="features.html#fdsingle-complex-position">fdsingle_complex_position</a>
 for connected shapes consisting of only a single part.</p>
 </div>
 <div class="section" id="installation">
@@ -106,16 +115,13 @@ toolkit. Otherwise <tt class="docutils literal">gendoc.py</tt> will not find the
 </div>
 <div class="section" id="uninstallation">
 <h2><a class="toc-backref" href="#toc-entry-6">Uninstallation</a></h2>
-<p>????????????On MS Windows, you can use the uninstaller from &quot;System Settings/Software&quot;.</p>
 <dl class="docutils">
 <dt>On Linux, you can uninstall the fd_toolkit as follows:</dt>
 <dd>1)Activate the virtual environment:
 source venv/bin/activate
 2)Uninstall the toolkit:
-pip uninstall fd_toolkit</dd>
+pip3 uninstall fd_toolkit</dd>
 </dl>
-<p>On MacOS X, the Python <em>distutils</em> do not support uninstallation.
-Thus you need to remove the installed Python library files manually.</p>
 <p>All python library files of this toolkit are installed into the
 <tt class="docutils literal">gamera/toolkits/fd_toolkit</tt> subdirectory of the Python library folder.
 It is thus sufficient to remove this directory for an uninstallation.</p>
@@ -137,7 +143,7 @@ Here are the folders that you need to remove on MacOS X and Debian Linux
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
 <tr><td class="label">[Dalitz2013]</td><td><em>(<a class="fn-backref" href="#citation-reference-1">1</a>, <a class="fn-backref" href="#citation-reference-2">2</a>, <a class="fn-backref" href="#citation-reference-3">3</a>)</em> Dalitz, C., Brandt, C., Goebbels, S., Kolanus, D.:
-<a class="reference external" href="http://informatik.hsnr.de/~dalitz/data/publications/broken-fourier.pdf">&quot;Fourier Descriptors for Broken Shapes.&quot;</a> EURASIP Journal on
+<a class="reference external" href="https://doi.org/10.1186/1687-6180-2013-161">&quot;Fourier Descriptors for Broken Shapes.&quot;</a> EURASIP Journal on
 Advances in Signal Processing 2013:161, 2013</td></tr>
 </tbody>
 </table>

@@ -46,6 +46,26 @@ Installation
 See the section "Installation" in 'doc/html/index.html' or 
 'doc/src/index.txt'.
 
+Usage
+-----
+```python
+from gamera.core import *  				# import Gamera core
+from gamera.toolkits import fourierfeatures		# import fourierfeatures toolkit
+from gamera.toolkits.fourierfeatures import broken	# import the 'broken' plugin from fourierfeatures
+# from gamera.toolkits.fourierfeatures import single	# import the 'single' plugin from fourierfeatures
+
+# Initialize Gamera
+init_gamera()
+
+# Load an image and convert it to one-bit
+img = load_image("path/to/your/image.png").to_onebit()
+
+# Apply a Fourier descriptor from the 'broken' plugin
+fd = img.fdbroken_a();	
+
+# Print the resulting FloatVector
+print("fdbroken_a:", fd)
+```
 
 Authors
 -------

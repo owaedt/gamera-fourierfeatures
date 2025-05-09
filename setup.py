@@ -24,7 +24,7 @@ from setuptools import setup
 from gamera import gamera_setup
 
 # This constant should be the name of the toolkit
-TOOLKIT_NAME = "fd_toolkit"
+TOOLKIT_NAME = "fourierfeatures"
 
 # ----------------------------------------------------------------------------
 # You should not usually have to edit anything below, but it is
@@ -42,7 +42,7 @@ plugin_extensions = gamera_setup.generate_plugins(plugins, PLUGIN_PACKAGE)
 # This is a standard setuptools setup initializer. If you need to do
 # anything more complex here, refer to the Python setuptools documentation.
 if __name__ == "__main__":
-    setup(name=TOOLKIT_NAME,
+    setup(name="gamera-fourierfeatures",
           version="2.0.0",
           ext_modules=plugin_extensions,
           packages=[PACKAGE, PLUGIN_PACKAGE],

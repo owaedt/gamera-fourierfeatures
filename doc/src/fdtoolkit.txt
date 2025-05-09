@@ -1,5 +1,5 @@
 
-FdToolkit
+Fourier Features
 =========
 
 ``floatFourierDescriptorLaskov``
@@ -9,7 +9,7 @@ FdToolkit
 
 
 :Returns: ``FloatVector``
-:Category: FdToolkit
+:Category: Fourier Features
 :Defined in: single.py
 :Author: Christian Brandt
 

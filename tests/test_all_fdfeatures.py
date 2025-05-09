@@ -1,7 +1,7 @@
 
 from gamera.core import *
-from gamera.toolkits.fd_toolkit import single
-from gamera.toolkits.fd_toolkit import broken
+from gamera.toolkits.fourierfeatures import single
+from gamera.toolkits.fourierfeatures import broken
 init_gamera()
 import math
 
