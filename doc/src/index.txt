@@ -1,8 +1,8 @@
 ==========================
-Overview of the FD-toolkit
+Overview of the Fourier Features
 ==========================
 
-:Editor: Christian Brandt, Christoph Dalitz and Oskar Waedt
+:Editor: Christian Brandt, Christoph Dalitz, Oskar Waedt
 
 :Version: 2.0.0
 

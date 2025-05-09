@@ -25,6 +25,6 @@ and may be omitted if you are not concerned with that.
 """
 
 from gamera import toolkit
-from gamera.toolkits.fd_toolkit.plugins import single
-#from gamera.toolkits.fd_toolkit.plugins import dft
-from gamera.toolkits.fd_toolkit.plugins import broken
+from gamera.toolkits.fourierfeatures.plugins import single
+#from gamera.toolkits.fourierfeatures.plugins import dft
+from gamera.toolkits.fourierfeatures.plugins import broken
