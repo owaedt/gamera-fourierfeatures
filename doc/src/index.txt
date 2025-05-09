@@ -1,6 +1,6 @@
-==========================
-Overview of the Fourier Features
-==========================
+========================================
+Overview of the Fourier Features Toolkit
+========================================
 
 :Editor: Christian Brandt, Christoph Dalitz, Oskar Waedt
 
@@ -34,11 +34,32 @@ The best performing features in [Dalitz2013]_ were fdbroken_a_ for shapes
 combined from an arbitrary number of parts and fdsingle_complex_position_
 for connected shapes consisting of only a single part.
 
+Basic usage in a python script is as follows::
+
+    from gamera.core import *  				# import Gamera core
+    from gamera.toolkits import fourierfeatures		# import fourierfeatures toolkit
+    from gamera.toolkits.fourierfeatures import broken	# import the 'broken' plugin from fourierfeatures
+    from gamera.toolkits.fourierfeatures import single	# import the 'single' plugin from fourierfeatures
+
+    # initialize Gamera
+    init_gamera()
+
+    # load an image and convert it to one-bit
+    img = load_image("path/to/your/image.png").to_onebit()
+
+    # apply two different Fourier descriptors and print them
+    fd = img.fdbroken_a()
+    print(fd)
+    fd = img.fdsingle_complex_position()
+    print(fd)
+
+
 .. _Plugins: features.html
 
 .. _fdbroken_a: features.html#fdbroken-a
 
 .. _fdsingle_complex_position: features.html#fdsingle-complex-position
+
 
 Installation
 ''''''''''''
@@ -46,6 +67,7 @@ Installation
 This toolkit has only been tested on Linux and MacOS X.
 The following installation instructions should work for any Unix like
 operating system (MacOS X, Linux, Solaris, FreeBSD, ...) 
+
 
 Prerequisites
 -------------
@@ -71,19 +93,19 @@ Building and Installing
 To build and install this toolkit on Linux or MacOS X, activate your virtual environment (where Gamera is installed), go to the base
 directory of the toolkit distribution and run ::
 	
-	# 1) activate the virtual environment
+	# activate the virtual environment
 	source path/to/venv/bin/activate
-   	# 2) compile
+   	# compile
 	python3 setup.py build bdist_wheel
-	# 3) install
-	pip3 install dist/gamera_ocr-*.whl
+	# install
+	pip3 install dist/gamera_fourierfeatures-*.whl
 	
 No root privileges are required. All components are installed locally inside the virtual environment.
 
-If you want to use your virtual environment with Gamera globally, you can add its bin directory to your shell’s PATH variable:
+If you want to use your virtual environment with Gamera globally, you can add its bin directory to your shell’s PATH variable::
 
-echo 'export PATH="$HOME/venv/bin:$PATH"' >> ~/.bashrc
-source ~/.bashrc
+    echo 'export PATH="$HOME/venv/bin:$PATH"' >> ~/.bashrc
+    source ~/.bashrc
 
 To regenerate the documentation, go to the ``doc`` directory and run the
 ``gendoc.py`` script. The output will be placed in the ``doc/html/``
@@ -96,11 +118,12 @@ for convenient viewing.
 Uninstallation
 --------------
 
-On Linux, you can uninstall the fd_toolkit as follows:
-	1)Activate the virtual environment:
-	source venv/bin/activate
-	2)Uninstall the toolkit:
-	pip3 uninstall fd_toolkit
+On Linux, you can uninstall the FourierFeatures Toolkit as follows:
+
+    # Activate the virtual environment:
+    source venv/bin/activate
+    # Uninstall the toolkit:
+    pip3 uninstall gamera-fourierfeatures
 
 All python library files of this toolkit are installed into the 
 ``gamera/toolkits/fd_toolkit`` subdirectory of the Python library folder.

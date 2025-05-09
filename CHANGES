@@ -1,7 +1,7 @@
-Changelog of the Fourier Features for Gamera
-======================================
+Changelog of the Fourier Features Toolkit for Gamera
+====================================================
 
-Version 2.0.0    (upcoming)
+Version 2.0.0, May 09, 2025
 ---------------------------
 
  - ported to Python 3 and Gamera 4

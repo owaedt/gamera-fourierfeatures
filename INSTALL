@@ -1,4 +1,40 @@
-Installation instructions Gamera FourierFeatures Toolkit
---------------------------------------------------------
+Installation instructions for teh Gamera FourierFeatures Toolkit
+================================================================
 
-see doc/src/index.txt for detailed installation isntructions.
+Building and Installing
+-----------------------
+
+To build and install this toolkit on Linux or MacOS X, activate your virtual environment (where Gamera is installed), go to the base
+directory of the toolkit distribution and run ::
+	
+	# activate the virtual environment
+	source path/to/venv/bin/activate
+   	# compile
+	python3 setup.py build bdist_wheel
+	# install
+	pip3 install dist/gamera_fourierfeatures-*.whl
+	
+No root privileges are required. All components are installed locally inside the virtual environment.
+
+If you want to use your virtual environment with Gamera globally, you can add its bin directory to your shell’s PATH variable::
+
+    echo 'export PATH="$HOME/venv/bin:$PATH"' >> ~/.bashrc
+    source ~/.bashrc
+
+To regenerate the documentation, go to the ``doc`` directory and run the
+``gendoc.py`` script. The output will be placed in the ``doc/html/``
+directory.  The contents of this directory can be placed on a webserver
+for convenient viewing.
+
+.. note:: Before building the documentation you must install the
+   toolkit. Otherwise ``gendoc.py`` will not find the plugin documentation.
+
+Uninstallation
+--------------
+
+On Linux, you can uninstall the FourierFeatures Toolkit as follows:
+
+    # Activate the virtual environment:
+    source venv/bin/activate
+    # Uninstall the toolkit:
+    pip3 uninstall gamera-fourierfeatures

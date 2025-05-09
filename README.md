@@ -1,5 +1,5 @@
 Fourier Features Toolkit for Gamera
-=====================================
+===================================
 
 The FourierFeatures Toolkit implements a wide variety of Fourier descriptors.
 These are useful features for shape recognition. In contrast to ordinary
@@ -28,16 +28,19 @@ Requirements
 
 This toolkit has been written for the Gamera framework and requires
 a working installation of Python 3.x Gamera 4.x installation.
-See the Gamera homepage:
-
-	http://gamera.sourceforge.net/
+See the Gamera homepage	http://gamera.sourceforge.net/.
 
 
 Documentation
 -------------
 
-For a user's guide and a developer's guide see 'doc/html/index.html'.
-For release notes and a revision history see 'CHANGES'.
+For a user's guide and a developer's guide see ``doc/html/index.html``.
+For release notes and a revision history see ``CHANGES``.
+
+If you need to generate the HTML docs, you can do so with
+
+    cd doc
+    python3 gendoc.py
 
 
 Installation
@@ -46,8 +49,12 @@ Installation
 See the section "Installation" in 'doc/html/index.html' or 
 'doc/src/index.txt'.
 
+
 Usage
 -----
+
+When the toolkit is instaled, you can use it in a python script as follows:
+
 ```python
 from gamera.core import *  				# import Gamera core
 from gamera.toolkits import fourierfeatures		# import fourierfeatures toolkit
@@ -61,10 +68,10 @@ init_gamera()
 img = load_image("path/to/your/image.png").to_onebit()
 
 # Apply a Fourier descriptor from the 'broken' plugin
-fd = img.fdbroken_a();	
+fd = img.fdbroken_a()
 
 # Print the resulting FloatVector
-print("fdbroken_a:", fd)
+print(fd)
 ```
 
 Authors
